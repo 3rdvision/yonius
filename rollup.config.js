@@ -6,7 +6,7 @@ import nodePolyfills from "rollup-plugin-node-polyfills";
 import dts from "rollup-plugin-dts";
 import pkg from "./package.json";
 
-import { yoniusRollup } from "./js/rollup/plugins";
+import { yoniusRollup } from "./src/rollup/plugins";
 
 const nodePath = process.env.NODE_PATH
     ? process.platform === "win32"
@@ -25,7 +25,7 @@ const banner =
 
 export default [
     {
-        input: "js/index.js",
+        input: "src/index.js",
         output: {
             name: "yonius",
             file: pkg.browser,
@@ -52,7 +52,7 @@ export default [
         ]
     },
     {
-        input: "js/index.js",
+        input: "src/index.js",
         external: ["node-fetch", "fs", "process", "path"],
         output: [
             {

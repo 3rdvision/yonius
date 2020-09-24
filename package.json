@@ -29,7 +29,7 @@
         "LICENSE",
         "dist/**/*",
         "res/**/*",
-        "js/**/*.js",
+        "src/**/*.js",
         "test/**/*.js",
         "types/**/*.d.ts"
     ],
