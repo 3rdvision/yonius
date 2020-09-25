@@ -46,8 +46,16 @@ export default [
             commonjs(),
             babel({
                 babelrc: false,
-                babelHelpers: "bundled",
-                presets: ["@babel/preset-env"]
+                babelHelpers: "runtime",
+                presets: ["@babel/preset-env"],
+                plugins: [
+                  [
+                    "@babel/plugin-transform-runtime",
+                    {
+                      regenerator: true
+                    }
+                  ]
+                ]
             })
         ]
     },
